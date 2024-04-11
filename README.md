@@ -10,7 +10,7 @@ import pandas as pd
 
 # read dataset 
 
-data = pd.read_csv('decision tree.csv')
+data = pd.read_csv('adultincome.csv')
 
 # check for null values 
 
