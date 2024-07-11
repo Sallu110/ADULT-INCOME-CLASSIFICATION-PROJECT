@@ -11,7 +11,7 @@ Evaluation
 Conclusion
 
 # Introduction
-In this project, I predict whether an adult's income exceeds $50K/year based on attributes such as education level, race, gender, hours worked per week, type of employment, and marital status using a machine learning model.
+In this project, I predicted whether an adult's income exceeds $50K/year based on attributes such as education level, race, gender, hours worked per week, type of employment, and marital status using a machine learning model.
 
 # Data Preprocessing
 Import Libraries: Import pandas for data handling and scikit-learn for machine learning:
