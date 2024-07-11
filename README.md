@@ -1,54 +1,49 @@
 
-# Predicting Adult Income
-This project focuses on predicting adult income based on demographic and employment-related features using a machine learning model.
+# Predicting Adult Income using Decision Tree Classifier
+This project aims to predict whether an adult's income exceeds $50K/year based on demographic and employment-related features using a Decision Tree Classifier.
 
-# STEPS OF PROJECT
+# steps of project
 Introduction
-
 Data Preprocessing
 Model Training
 Evaluation
 Conclusion
 
 # Introduction
-In this project, I predicted whether an adult's income exceeds $50K/year based on attributes such as education level, race, gender, hours worked per week, type of employment, and marital status using a machine learning model.
+The project utilizes a Decision Tree Classifier to classify adults into income categories based on features such as education level, race, gender, hours worked per week, company type, and marital status.
 
 # Data Preprocessing
-Import Libraries: Import pandas for data handling and scikit-learn for machine learning:
-
+Import Libraries: Import pandas for data handling:
 # import pandas as pd
-# from sklearn.model_selection import train_test_split
 Read Data: Read the dataset and handle missing values if any:
-
-income_data = pd.read_csv('income_data.csv')
+data = pd.read_csv('decision_tree.csv')
+Data Preparation: Encode categorical variables into numeric format using one-hot encoding:
+data_prep = pd.get_dummies(data, drop_first=True)
 Split Data: Split the dataset into features (X) and the target variable (Y):
+X = data_prep.drop(['income_>50K'], axis=1)
+Y = data_prep['income_>50K']
 
-X = income_data.drop(['income'], axis=1)
-Y = income_data['income']
-Encode Categorical Variables: Convert categorical variables into numeric format using one-hot encoding or label encoding:
-
-X = pd.get_dummies(X, drop_first=True)
 Train-Test Split: Split the dataset into training and testing sets:
+# from sklearn.model_selection import train_test_split
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=1234, stratify=Y)
 
 # Model Training
-Select Machine Learning Model: Choose a suitable machine learning algorithm (e.g., logistic regression, random forest, etc.) based on the problem requirements:
-
-# from sklearn.ensemble import RandomForestClassifier
-model = RandomForestClassifier(random_state=1234)
-Fit and Train the Model: Train the model on the training data:
-model.fit(X_train, Y_train)
-
+Select and Train Decision Tree Classifier: Choose a Decision Tree Classifier and train the model:
+# from sklearn.tree import DecisionTreeClassifier
+dtc = DecisionTreeClassifier(random_state=1234)
+dtc.fit(X_train, Y_train)
 # Evaluation
-Evaluate the Model: Evaluate the model's performance on the test set using appropriate metrics (e.g., accuracy, precision, recall):
-accuracy = model.score(X_test, Y_test)
+Evaluate the Model: Evaluate the model's performance on the test set using accuracy metrics:
+score = dtc.score(X_test, Y_test)
 Confusion Matrix: Optionally, analyze model predictions using a confusion matrix for further insights:
-
 # from sklearn.metrics import confusion_matrix
-predictions = model.predict(X_test)
-cm = confusion_matrix(Y_test, predictions)
+Y_predict = dtc.predict(X_test)
+cm = confusion_matrix(Y_test, Y_predict)
 
 # Conclusion
-This project demonstrates the use of machine learning techniques to predict adult income based on demographic and employment-related features. The model's performance is evaluated using accuracy metrics and 
-optionally a confusion matrix.
+This project demonstrates the application of a Decision Tree Classifier to predict adult income based on demographic and employment-related features. Model performance is evaluated using accuracy metrics and optionally a confusion matrix.
+
+
+
+
 
