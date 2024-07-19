@@ -32,6 +32,8 @@ Select and Train Decision Tree Classifier: Choose a Decision Tree Classifier and
 # from sklearn.tree import DecisionTreeClassifier
 dtc = DecisionTreeClassifier(random_state=1234)
 dtc.fit(X_train, Y_train)
+
+
 # Evaluation
 Evaluate the Model: Evaluate the model's performance on the test set using accuracy metrics:
 score = dtc.score(X_test, Y_test)
@@ -39,6 +41,11 @@ Confusion Matrix: Optionally, analyze model predictions using a confusion matrix
 # from sklearn.metrics import confusion_matrix
 Y_predict = dtc.predict(X_test)
 cm = confusion_matrix(Y_test, Y_predict)
+
+![Screenshot 2024-07-18 164552](https://github.com/user-attachments/assets/cfef7992-8a5a-4167-b3af-5bf0eaad4dd6)
+
+![Screenshot 2024-07-18 164641](https://github.com/user-attachments/assets/a0df5a59-af00-425a-92ac-2dc60eb01a16)
+
 
 # Conclusion
 This project demonstrates the application of a Decision Tree Classifier to predict adult income based on demographic and employment-related features. Model performance is evaluated using accuracy metrics and optionally a confusion matrix.
