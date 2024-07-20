@@ -2,7 +2,7 @@
 # Predicting Adult Income using Decision Tree Classifier
 This project aims to predict whether an adult's income exceeds $50K/year based on demographic and employment-related features using a Decision Tree Classifier.
 
-# steps of project
+# "steps of project"
 Introduction
 Data Preprocessing
 Model Training
