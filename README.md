@@ -4,13 +4,19 @@ This project aims to predict whether an adult's income exceeds $50K/year based o
 
 ## Steps of project
 1. Introduction
-2. Data Preprocessing
-3. Model Training
-4. Evaluation
-5. Conclusion
+2. Dataset 
+3. Data Preprocessing
+4. Model Training
+5. Evaluation
+6. Conclusion
 
 ### Introduction
 The project utilizes a Decision Tree Classifier to classify adults into income categories based on features such as education level, race, gender, hours worked per week, company type, and marital status.
+
+### Dataset 
+
+![Screenshot 2024-08-11 102956](https://github.com/user-attachments/assets/4574757f-d3c8-4322-a65c-a66d7068de9a)
+
 
 ### Data Preprocessing
 Import Libraries: Import pandas for data handling:
